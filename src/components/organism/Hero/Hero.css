@@ -1,0 +1,62 @@
+.hero-container {
+    background-color: var(--color-lighter);
+    color: black;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsecureprintportal.s3.us-west-1.amazonaws.com%2Fproduction%2Fassets%2F5966561450122033bd4456f8%2FimageLocker%2Fblog-description%2F5f11c366a53d4d3a831471de%2Fblog%2Fsports_banners.png&f=1&nofb=1"); /*Need a banner image*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 40rem;
+    width: 100%;
+
+    padding: 1rem 0 1rem 0;
+}
+
+.banner-title {
+    /* background-color: var(--color1); */
+    width: 40rem;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+.banner-title > a {
+    text-decoration: none;
+}
+
+.sport-link {
+    background-color: var(--color1);
+    color: var(--color3);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px,
+        rgba(0, 0, 0, 0.15) 0px 6px 6px;
+
+    font-size: 3rem;
+
+    width: 24rem;
+
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.team-link {
+    background-color: var(--color1);
+    color: var(--color3);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px,
+        rgba(0, 0, 0, 0.15) 0px 6px 6px;
+
+    font-size: 2rem;
+
+    width: 16rem;
+
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.sport-link:hover,
+.team-link:hover {
+    color: var(--color2);
+}

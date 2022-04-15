@@ -1,0 +1,9 @@
+.notfound-container {
+    width: 100%;
+    background-color: white;
+}
+
+.notfound-title {
+    color: var(--color-dark);
+    font-size: 3rem;
+}

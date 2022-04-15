@@ -1,0 +1,9 @@
+.loginpage-container {
+    background-color: white;
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

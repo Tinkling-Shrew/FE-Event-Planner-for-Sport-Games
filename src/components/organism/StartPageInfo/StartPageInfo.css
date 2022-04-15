@@ -1,0 +1,16 @@
+.startpage-info-text {
+    color: var(--color-dark);
+
+    width: 100%;
+
+    padding: 0 1rem 5rem 1rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

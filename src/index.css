@@ -1,0 +1,38 @@
+:root {
+    --color1: #06b2f8;
+    --color2: #ffc33c;
+    --color3: #f9fbdc;
+    --color4: #ff4c65;
+    --color-light: #dedede;
+    --color-lighter: #fefefe;
+    --color-dark: #212121;
+    --color-darker: #101010;
+}
+
+body {
+    background-color: var(--color-light);
+    margin: 0;
+    padding: 0;
+    padding: 0 1rem 0 1rem;
+    font-family: "Roboto";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+a:hover {
+    color: var(--color2);
+}
+
+.app-container {
+    background-color: var(--color-light);
+}

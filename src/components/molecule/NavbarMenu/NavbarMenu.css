@@ -1,0 +1,17 @@
+.menu-container {
+    color: white;
+}
+
+.menu-container > a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.menu-option {
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: var(--color2);
+}

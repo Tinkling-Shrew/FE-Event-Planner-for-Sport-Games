@@ -1,0 +1,7 @@
+.title {
+    background-color: var(--color1);
+    color: var(--color3);
+    margin: 1rem 1rem 5rem 1rem;
+    width: 100%;
+    text-align: center;
+}

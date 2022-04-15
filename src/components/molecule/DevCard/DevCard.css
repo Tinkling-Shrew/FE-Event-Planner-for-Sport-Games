@@ -1,0 +1,52 @@
+.devcard-container {
+    background-color: var(--color1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px,
+        rgba(0, 0, 0, 0.15) 0px 6px 6px;
+
+    width: 20rem;
+    height: 30rem;
+
+    padding: 1rem 1rem 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.devcard-profile {
+    background-color: white;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.devcard-image {
+    margin: 1rem;
+    width: 8rem;
+    border: 0.2rem solid var(--color1);
+    border-radius: 10rem;
+}
+
+.devcard-name {
+    width: 90%;
+    text-align: center;
+    box-shadow: 1px 1px rgb(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+.devcard-role {
+    text-align: center;
+    margin: 1rem;
+}
+
+.devcard-info {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}

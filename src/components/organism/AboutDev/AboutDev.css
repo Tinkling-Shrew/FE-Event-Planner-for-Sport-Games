@@ -1,0 +1,36 @@
+.aboutdev-container {
+    background-color: var(--color-ligher);
+
+    width: 100%;
+
+    padding: 0 1rem 5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutdev-image {
+    position: fixed;
+}
+
+.aboutdev-title {
+    background-color: var(--color1);
+    color: var(--color3);
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.aboutdev-profile {
+    width: 100%;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
