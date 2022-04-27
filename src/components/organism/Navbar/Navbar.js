@@ -13,10 +13,7 @@ const Navbar = () => {
             <Logo />
             <div className="navbar-right">
                 <NavbarMenu value="miau" />
-                <Profile
-                    name="Adam"
-                    imageSrc="https://cdn.discordapp.com/avatars/185098419793035276/31a9af28685ea68f490504656c7863de.webp?size=1024"
-                />
+                <Profile />
             </div>
         </div>
     );

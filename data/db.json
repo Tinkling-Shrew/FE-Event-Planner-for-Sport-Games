@@ -1,0 +1,82 @@
+{
+    "devs": [
+        {
+            "devName": "Adam",
+            "roleName": "Frontend",
+            "cardInfo": "Ardelean cu tupeu de poet",
+            "imageLink": "https://cdn.discordapp.com/avatars/185098419793035276/31a9af28685ea68f490504656c7863de.webp?size=1024"
+        },
+        {
+            "devName": "Cristi",
+            "roleName": "Backend",
+            "cardInfo": "",
+            "imageLink": "https://cdn.discordapp.com/avatars/250670193175560193/c511e2117668d450177619a56d20c8f8.webp?size=1024"
+        },
+        {
+            "devName": "Alex",
+            "roleName": "Bothend",
+            "cardInfo": "",
+            "imageLink": "https://cdn.discordapp.com/avatars/172735768723324928/290628ba321de0f73c2975eb69fec2a9.webp?size=1024"
+        }
+    ],
+    "user": {
+        "id": 2001,
+        "name": "Ravelyk"
+    },
+    "games": [
+        {
+            "id": 123,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        },
+        {
+            "id": 124,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event1",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        },
+        {
+            "id": 125,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event2",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        },
+        {
+            "id": 126,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event3",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        },
+        {
+            "id": 127,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event4",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        },
+        {
+            "id": 128,
+            "current-players": 5,
+            "max-players": 9,
+            "name": "Ravelyk's event5",
+            "type": "Baschet",
+            "host": "Ravelyk",
+            "pass": ""
+        }
+    ]
+}

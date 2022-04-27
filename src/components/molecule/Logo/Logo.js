@@ -11,7 +11,7 @@ const Logo = () => {
                 src="https://konch.ie/vlpu3wvi8j23.png"
                 alt="Our beautiful logo designed by Chinese graphic designers."
             /> */}
-            <a className="logo-text" href="https://google.com">
+            <a className="logo-text" href="/home">
                 Sports Planner
             </a>
         </div>

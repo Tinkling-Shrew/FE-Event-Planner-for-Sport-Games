@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 :root {
     --color1: #06b2f8;
     --color2: #ffc33c;
@@ -7,6 +9,15 @@
     --color-lighter: #fefefe;
     --color-dark: #212121;
     --color-darker: #101010;
+    --color-valid: #2cb774;
+    --color-invalid: #fe0d1b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -22,11 +33,6 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
-}
-
-* {
-    box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 
 a:hover {

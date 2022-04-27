@@ -1,6 +1,5 @@
 import React from "react";
 import "./NavbarMenu.css";
-import Profile from "../Profile/Profile";
 
 export const mainClass = "menu-container";
 
@@ -10,13 +9,16 @@ const Menu = () => {
             <a className="menu-option" href="/start">
                 Start
             </a>
-            <a className="menu-option" href="https://google.com">
+            <a className="menu-option" href="/home">
+                Home
+            </a>
+            <a className="menu-option" href="/lobby">
                 Lobby
             </a>
-            <a className="menu-option" href="https://google.com">
-                Help
+            <a className="menu-option" href="/about">
+                About
             </a>
-            <a className="menu-option" href="https://google.com">
+            <a className="menu-option" href="/contact">
                 Contact
             </a>
         </div>

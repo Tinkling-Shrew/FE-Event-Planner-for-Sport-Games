@@ -1,9 +1,14 @@
 .notfound-container {
     width: 100%;
-    background-color: white;
+    background-color: var(--color-light);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .notfound-title {
     color: var(--color-dark);
-    font-size: 3rem;
+    font-size: 2rem;
 }
