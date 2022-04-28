@@ -1,5 +1,6 @@
 import "./SportEventList.css";
 import SportEvent from "../../molecule/SportEvent/SportEvent";
+import LoadingObject from "../LoadingObject/LoadingObject";
 
 export const mainClass = "sportevent-list";
 
@@ -8,18 +9,20 @@ export const mainClass = "sportevent-list";
 const SportEventList = ({ list }) => {
     return (
         <div className={mainClass}>
-            {list.length > 0
-                ? list.map((obj) => (
-                      <SportEvent
-                          key={obj.id}
-                          id={obj.id}
-                          title={obj.name}
-                          type={obj.type}
-                          host={obj.host}
-                          pass={obj.pass}
-                      />
-                  ))
-                : "loading..."}
+            {list.length > 0 ? (
+                list.map((obj) => (
+                    <SportEvent
+                        key={obj.id}
+                        id={obj.id}
+                        title={obj.name}
+                        sport={obj.sport}
+                        host={obj.host}
+                        pass={obj.pass}
+                    />
+                ))
+            ) : (
+                <LoadingObject />
+            )}
         </div>
     );
 };

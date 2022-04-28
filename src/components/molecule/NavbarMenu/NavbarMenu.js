@@ -6,8 +6,8 @@ export const mainClass = "menu-container";
 const Menu = () => {
     return (
         <div className={mainClass}>
-            <a className="menu-option" href="/start">
-                Start
+            <a className="menu-option" href="/landing">
+                Landing
             </a>
             <a className="menu-option" href="/home">
                 Home
@@ -18,8 +18,8 @@ const Menu = () => {
             <a className="menu-option" href="/about">
                 About
             </a>
-            <a className="menu-option" href="/contact">
-                Contact
+            <a className="menu-button" href="/create_event">
+                CREATE
             </a>
         </div>
     );

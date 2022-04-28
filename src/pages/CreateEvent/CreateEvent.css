@@ -1,0 +1,22 @@
+.createevent-container {
+    background-color: var(--color-lighter);
+
+    width: 100%;
+    height: 100%;
+
+    padding: 1rem;
+}
+
+.createevent-body {
+    margin: 1rem 0 0 0;
+
+    box-shadow: inset 0rem 0rem 1rem rgb(0, 0, 0, 0.1);
+    border-radius: 1rem;
+
+    padding: 1rem;
+}
+
+.createevent-label {
+    font-size: 1.5rem;
+    margin: 1rem;
+}

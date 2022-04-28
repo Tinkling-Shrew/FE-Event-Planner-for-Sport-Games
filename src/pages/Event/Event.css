@@ -1,0 +1,8 @@
+.event-container {
+    background-color: var(--color-lighter);
+    padding: 1rem 0 0 0;
+}
+
+.event-body {
+    height: 80vh;
+}

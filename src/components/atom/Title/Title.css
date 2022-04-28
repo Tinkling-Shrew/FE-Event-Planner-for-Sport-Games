@@ -4,3 +4,7 @@
     width: 100%;
     text-align: center;
 }
+
+.title > span {
+    padding: 1rem;
+}

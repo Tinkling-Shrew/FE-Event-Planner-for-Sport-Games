@@ -1,7 +1,7 @@
-.startpage-container {
+.landing-container {
     background-color: white;
 
-    height: 100%;
+    height: 78.5vh;
     width: 100%;
 
     display: flex;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.startpage-hero-container {
+.landing-hero-container {
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.scottishadhdcoalition.org%2Fwp-content%2Fuploads%2F2017%2F09%2FBanner-children-.png&f=1&nofb=1");
     background-position: center;
     background-repeat: no-repeat;
@@ -22,18 +22,18 @@
     padding: 2rem 0 2rem 0;
 }
 
-.startpage-title-container {
-    width: 100%;
-
+.landing-title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-landing;
 }
 
-.startpage-title {
+.landing-title {
     background-color: var(--color1);
     color: var(--color3);
+
+    width: fit-content;
 
     font-weight: bold;
     font-size: 3rem;
@@ -43,9 +43,11 @@
     margin: 0 0 1rem 0;
 }
 
-.startpage-subtitle {
+.landing-subtitle {
     background-color: var(--color1);
     color: var(--color3);
+
+    width: fit-content;
 
     font-weight: bold;
     font-size: 2.2rem;
@@ -55,12 +57,38 @@
     margin: 1rem 0 1rem 0;
 }
 
-.startpage-mark {
+.landing-mark {
     background-color: transparent;
     color: var(--color2);
     font-weight: bolder;
 }
 
-.startpage-banner {
+.landing-banner {
     width: 100%;
+}
+
+.landing-info-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-info-text {
+    color: var(--color-dark);
+
+    width: 100%;
+
+    padding: 0 1rem 5rem 1rem;
+
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

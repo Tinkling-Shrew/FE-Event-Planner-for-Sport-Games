@@ -11,20 +11,24 @@
     --color-darker: #101010;
     --color-valid: #2cb774;
     --color-invalid: #fe0d1b;
+    --i: 0s;
 }
 
 * {
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
 
 body {
-    background-color: var(--color-light);
+    background-color: var(--color-lighter);
     margin: 0;
     padding: 0;
-    padding: 0 1rem 0 1rem;
     font-family: "Roboto";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

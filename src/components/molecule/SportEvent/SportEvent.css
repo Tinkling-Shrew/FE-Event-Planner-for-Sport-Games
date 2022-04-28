@@ -13,6 +13,11 @@
     align-items: flex-start;
 }
 
+.sportevent-title,
+.sportevent-host {
+    text-decoration: none;
+}
+
 .sportevent-title {
     color: var(--color1);
     text-decoration: none;
@@ -20,6 +25,10 @@
     padding: 0 0 0.5rem 0;
 
     font-size: 2rem;
+}
+
+.sportevent-host {
+    color: var(--color4);
 }
 
 .sportevent-left,
@@ -65,4 +74,10 @@
 
 .sportevent-type {
     color: var(--color4);
+}
+
+.sportevent-basic-text {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--color-dark);
 }
