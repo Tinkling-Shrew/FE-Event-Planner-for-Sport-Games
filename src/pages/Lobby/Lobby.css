@@ -1,12 +1,55 @@
 .lobby-container {
-    background-color: white;
+    background-color: var(--color-lighter);
 
+    box-shadow: inset 0 0 2rem rgb(0, 0, 0, 0.1);
+
+    width: 100%;
+    height: 90vh;
+
+    padding: 1rem 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.lobby-body {
+    width: 100%;
+    height: 100%;
+
+    /* border: 10px solid black; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lobby-upper-body {
     width: 100%;
 
     padding: 1rem;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.lobby-upper-body > * {
+    margin: 0 1rem 0 0;
+}
+
+.lobby-search-text {
+    font-size: var(--font-size-medium);
+}
+
+.lobby-search-input {
+    width: 20rem;
+    width: 100%;
+    height: 3rem;
+
+    padding: 1rem;
+
+    text-align: left;
+    font-size: var(--font-size-min);
 }

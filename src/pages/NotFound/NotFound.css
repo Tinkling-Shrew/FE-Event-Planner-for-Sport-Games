@@ -10,5 +10,5 @@
 
 .notfound-title {
     color: var(--color-dark);
-    font-size: 2rem;
+    font-size: var(--font-size-big);
 }

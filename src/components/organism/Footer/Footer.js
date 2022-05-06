@@ -7,15 +7,24 @@ export const mainClass = "footer-container";
 const Footer = () => {
     return (
         <div className={mainClass}>
-            <Title title="Footer" />
-            <div className="footer-info-container">
-                <div>
-                    <h1>Event Planner</h1>
-                    <h2>Made using React</h2>
-                    <h3>Project created with the help of IBM employees</h3>
+            <Title
+                title={
+                    <a className="footer-title" href="/">
+                        @Sport Planner
+                    </a>
+                }
+                loc="left"
+            />
+            <div className="footer-body">
+                <div className="footer-left">
+                    <span className="footer-text">Created using React</span>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="footer-mid"></div>
+                <div className="footer-right">
+                    <a className="footer-text" href="/contact">
+                        Contact
+                    </a>
+                </div>
             </div>
         </div>
     );

@@ -1,0 +1,12 @@
+.twoobj-container {
+    color: black;
+    width: 100%;
+    height: fit-content;
+
+    margin: 0.5rem 0 0.5rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

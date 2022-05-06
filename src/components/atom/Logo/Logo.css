@@ -1,0 +1,20 @@
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-text {
+    color: var(--color-lighter);
+    text-decoration: none;
+
+    font-size: var(--font-size-max);
+    font-weight: bold;
+}
+
+.logo-container:hover > .logo-text {
+    color: var(--color2);
+    transition: 0.2s;
+}

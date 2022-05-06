@@ -1,0 +1,69 @@
+.create-event-container {
+    background-color: var(--color-lighter);
+
+    width: 100%;
+    height: 80vh;
+
+    padding: 1rem 0;
+}
+
+.create-event-body {
+    width: 100%;
+
+    padding: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.create-event-body-upper,
+.create-event-body-lower {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.create-event-body-left,
+.create-event-body-right {
+    width: 49.5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.create-event-body-left > *,
+.create-event-body-right > * {
+    margin: 0 0 1rem 0;
+}
+
+.input-two-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-two-container > * {
+    width: 49%;
+}
+
+.input-two-container:nth-child(2) {
+    background-color: black;
+}
+
+.repeat-input {
+    margin: 0 1rem 0 1rem;
+    width: 4rem;
+    height: 2rem;
+}

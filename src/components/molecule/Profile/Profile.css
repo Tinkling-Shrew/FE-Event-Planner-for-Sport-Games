@@ -33,13 +33,17 @@
     text-decoration: none;
 
     margin: 0 0.5rem 0 0;
+
+    font-size: var(--font-size-small);
 }
 
 .profile-link {
     width: fit-content;
     height: fit-content;
+
     margin: 0;
     padding: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;

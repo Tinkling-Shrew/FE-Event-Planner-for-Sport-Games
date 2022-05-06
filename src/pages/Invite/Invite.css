@@ -1,0 +1,13 @@
+.invite-container {
+    background-color: var(--color4);
+    box-shadow: inner 10rem 10rem 10rem var(--color3);
+    color: var(--color3);
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10rem;
+}

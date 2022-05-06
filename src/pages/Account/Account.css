@@ -1,0 +1,55 @@
+.account-container {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.account-option-container {
+    background-color: var(--color-light);
+    border: 1px solid red;
+
+    width: fit-content;
+    height: 100rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.account-option-title {
+    background-color: var(--color-lighter);
+
+    padding: 1rem;
+
+    width: 100%;
+
+    height: fit-content;
+
+    text-align: center;
+    font-size: var(--font-size-max);
+}
+
+.option-container {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.account-option-link {
+    margin: 1rem;
+}
+
+.account-option-display {
+    width: 100%;
+    height: 100%;
+}
