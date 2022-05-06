@@ -22,7 +22,7 @@
 .pass-span {
     color: var(--color-dark);
     text-align: left;
-    font-size: 2rem;
+    font-size: var(--font-size-big);
     font-weight: bold;
 
     margin: 0 1rem 0 0;

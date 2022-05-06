@@ -1,0 +1,25 @@
+.error-message-container {
+    background-color: black;
+    color: var(--color-light);
+
+    width: 100%;
+    height: fit-content;
+
+    padding: 1rem;
+
+    font-size: var(--font-size-max);
+    font-weight: 900;
+
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color4),
+        var(--color-error-dark) 20px,
+        rgb(0, 0, 0, 0.1) 20px,
+        rgb(0, 0, 0, 0.1) 20px
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

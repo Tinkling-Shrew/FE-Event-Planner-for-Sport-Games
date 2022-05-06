@@ -1,8 +1,10 @@
 .lobby-container {
     background-color: var(--color-lighter);
 
+    box-shadow: inset 0 0 2rem rgb(0, 0, 0, 0.1);
+
     width: 100%;
-    height: 78vh;
+    height: 90vh;
 
     padding: 1rem 0 0 0;
 
@@ -33,9 +35,12 @@
     align-items: center;
 }
 
+.lobby-upper-body > * {
+    margin: 0 1rem 0 0;
+}
+
 .lobby-search-text {
-    font-size: 1.5rem;
-    padding: 0 1rem 0 0;
+    font-size: var(--font-size-medium);
 }
 
 .lobby-search-input {
@@ -46,5 +51,5 @@
     padding: 1rem;
 
     text-align: left;
-    font-size: 1rem;
+    font-size: var(--font-size-min);
 }

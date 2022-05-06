@@ -1,4 +1,5 @@
 .sportevent-container {
+    background-color: var(--color-lighter);
     width: 100%;
 
     border: 1px solid var(--color2);
@@ -24,7 +25,7 @@
 
     padding: 0 0 0.5rem 0;
 
-    font-size: 2rem;
+    font-size: var(--font-size-big);
 }
 
 .sportevent-host {
@@ -49,20 +50,22 @@
     align-items: flex-end;
 }
 
+.private-text,
+.public-text {
+    font-size: var(--font-size-medium);
+}
+
 .private-text {
     color: var(--color-invalid);
-
-    font-size: 1.5rem;
 }
 
 .public-text {
     color: var(--color-valid);
-    font-size: 1.5rem;
 }
 
 .sportevent-host {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: var(--font-size-small);
 
     margin: 1rem 0 1rem 0;
 }

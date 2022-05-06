@@ -12,6 +12,7 @@ import Account from "./pages/Account/Account";
 import Lobby from "./pages/Lobby/Lobby";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import Event from "./pages/Event/Event";
+import Invite from "./pages/Invite/Invite";
 
 const App = () => {
     return (
@@ -32,10 +33,13 @@ const App = () => {
                         <Route path="/lobby" element={<Lobby />} />
                         <Route path="/create_event" element={<CreateEvent />} />
                         <Route path="/event:id" element={<Event />} />
+                        <Route path="/invite" element={<Invite />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
-                {window.location.pathname !== "/lobby" && <Footer />}
+                {window.location.pathname !== "/lobby" &&
+                    window.location.pathname !== "/invite" &&
+                    window.location.pathname !== "/create_event" && <Footer />}
             </div>
         </BrowserRouter>
     );

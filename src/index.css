@@ -11,9 +11,18 @@
     --color-darker: #101010;
     --color-valid: #2cb774;
     --color-invalid: #fe0d1b;
-    --i: 0s;
+    --color-error-bright: #fe0d1b;
+    --color-error-dark: #000000;
+    --font-size-min: 0.5rem;
+    --font-size-smaller: 0.9rem;
+    --font-size-small: 1rem;
+    --font-size-medium: 1.5rem;
+    --font-size-big: 2rem;
+    --font-size-bigger: 2.5rem;
+    --font-size-max: 3rem;
 }
 
+/* FACTORY RESET */
 * {
     margin: 0;
     padding: 0;
@@ -45,4 +54,8 @@ a:hover {
 
 .app-container {
     background-color: var(--color-light);
+}
+
+.input:focus {
+    color: var;
 }

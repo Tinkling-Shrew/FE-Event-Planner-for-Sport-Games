@@ -7,4 +7,5 @@
 
 .title > span {
     padding: 1rem;
+    font-size: var(--font-size-big);
 }

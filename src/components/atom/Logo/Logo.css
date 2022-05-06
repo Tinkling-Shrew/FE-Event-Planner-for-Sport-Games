@@ -7,10 +7,10 @@
 }
 
 .logo-text {
-    color: white;
+    color: var(--color-lighter);
     text-decoration: none;
 
-    font-size: 3rem;
+    font-size: var(--font-size-max);
     font-weight: bold;
 }
 
