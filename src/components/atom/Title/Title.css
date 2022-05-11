@@ -1,11 +1,12 @@
 .title {
     background-color: var(--color1);
     color: var(--color3);
+
     width: 100%;
     text-align: center;
 }
 
-.title > span {
+.title > * {
     padding: 1rem;
     font-size: var(--font-size-big);
 }

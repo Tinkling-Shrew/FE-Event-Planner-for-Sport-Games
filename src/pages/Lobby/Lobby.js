@@ -6,8 +6,9 @@ import Title from "../../components/atom/Title/Title";
 import Input from "../../components/atom/Input/Input";
 import LoadingObject from "../../components/atom/LoadingObject/LoadingObject";
 import Button from "../../components/atom/Button/Button";
-import useAxiosFunction from "../../hooks/useAxiosFunction";
-import SportEvent from "../../components/molecule/SportEvent/SportEvent";
+import useFetch from "../../hooks/useFetch";
+import useAxiosFunction from "../../hooks/useAxiosFunction"
+import SportEvent from "../../components/atom/SportEvent/SportEvent";
 import ErrorMessage from "../../components/atom/ErrorMessage/ErrorMessage";
 
 export const mainClass = "lobby-container";

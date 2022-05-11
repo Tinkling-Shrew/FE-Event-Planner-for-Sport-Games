@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/organism/Navbar/Navbar";
-import Footer from "./components/organism/Footer/Footer";
+import Navbar from "./components/molecule/Navbar/Navbar";
+import Footer from "./components/molecule/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
 import Home from "./pages/Home/Home";
-import LoginPage from "./pages/LoginPage/LoginPage";
+import Login from "./pages/Login/Login";
 import NotFound from "./pages/NotFound/NotFound";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import Register from "./pages/Register/Register";
 import Account from "./pages/Account/Account";
 import Lobby from "./pages/Lobby/Lobby";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
@@ -25,11 +24,8 @@ const App = () => {
                         <Route path="/home" element={<Home />} />
                         <Route path="/landing" element={<Landing />} />
                         <Route path="/account" element={<Account />} />
-                        <Route path="/account/login" element={<LoginPage />} />
-                        <Route
-                            path="/account/register"
-                            element={<RegisterPage />}
-                        />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
                         <Route path="/lobby" element={<Lobby />} />
                         <Route path="/create_event" element={<CreateEvent />} />
                         <Route path="/event:id" element={<Event />} />

@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react";
 import axios from "../apis/KowApi";
 
-function useFetch(url) {
-    const [data, setData] = useState(null);
+function usePost(url, body) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         axios
-            .get(url)
+            .post(url, body)
             .then((response) => {
-                setData(response.data);
+                console.log(response);
             })
-            .catch((err) => {
-                setError(err);
-            })
+            .catch((err) => setError(err))
             .finally(() => {
                 setLoading(false);
             });
-    }, [url]);
+    }, [url, body]);
 
-    return { data, loading, error };
+    return { loading, error };
 }
 
-export default useFetch;
+export default usePost;

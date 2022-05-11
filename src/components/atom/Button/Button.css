@@ -7,15 +7,19 @@
 }
 
 .Button {
-    background-color: var(--color1);
+    cursor: pointer;
+    background-color: var(--color2);
     color: var(--color-lighter);
 
-    padding: 0.5rem;
+    padding: 0.8rem;
+    margin: 0 1rem 0 0.5rem;
 
-    border-color: var(--color1);
-    border-radius: 0.5rem;
+    border: 1px solid var(--color-lighter);
+    border-radius: 0.3rem;
 
-    box-shadow: 0 0 1rem rgb(0, 0, 0, 0.1);
+    font-size: var(--font-size-small);
+    font-weight: 0;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0, 0.2);
 
-    font-size: var(--font-size-smaller);
+    text-decoration: none;
 }

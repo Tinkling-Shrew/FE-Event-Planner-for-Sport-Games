@@ -2,9 +2,9 @@ import "./LinkButton.css";
 
 export const mainClass = "link-button";
 
-const LinkButton = ({ children }) => {
+const LinkButton = ({ children, href }) => {
     return (
-        <a className="link-button" href="/create_event">
+        <a className="link-button" href={href}>
             {children}
         </a>
     );

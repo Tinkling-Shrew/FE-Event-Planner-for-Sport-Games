@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import Title from "../../components/atom/Title/Title";
 import Input from "../../components/atom/Input/Input";
 import List from "../../components/atom/List/List";
-import useAxiosFunction from "../../hooks/useAxiosFunction";
-import KowApi from "../../apis/KowApi";
 import Button from "../../components/atom/Button/Button";
 import CheckBox from "../../components/atom/CheckBox/CheckBox";
 import Select from "../../components/atom/Select/Select";
@@ -12,44 +10,37 @@ import Select from "../../components/atom/Select/Select";
 export const mainClass = "create-event-container";
 
 const CreateEvent = () => {
-    const [event, error, loading, axiosFetch] = useAxiosFunction();
-    const [name, setName] = useState("");
-    const [location, setLocation] = useState("");
-    const [startDate, setStartDate] = useState("");
-    const [startTime, setStartTime] = useState("");
-    const [endTime, setEndTime] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [description, setDescription] = useState("");
-    const [invited, setInvited] = useState([]);
-    const [repeat, setRepeat] = useState({ mode: null, count: 0 });
-
-    const postData = () => {
-        axiosFetch({
-            axiosInstance: KowApi,
-            method: "POST",
-            url: "/events",
-            timeout: 8000,
-        });
-    };
-
-    const createEvent = (eventName, location, start) => {};
+    // const [errorMsgs, setErrorMsgs] = useState([]);
+    // const [name, setName] = useState("");
+    // const [location, setLocation] = useState("");
+    // const [startDate, setStartDate] = useState("");
+    // const [startTime, setStartTime] = useState("");
+    // const [endTime, setEndTime] = useState("");
+    // const [endDate, setEndDate] = useState("");
+    // const [description, setDescription] = useState("");
+    // const [invited, setInvited] = useState([]);
+    // const [repeat, setRepeat] = useState({ mode: null, count: 0 });
 
     useEffect(() => {}, []);
 
-    const current = new Date();
+    const currentDate = new Date();
     const date = `${
-        current.getDate() > 9 ? current.getDate() : "0" + current.getDate()
+        currentDate.getDate() > 9
+            ? currentDate.getDate()
+            : "0" + currentDate.getDate()
     }/${
-        current.getMonth() + 1 > 9
-            ? current.getMonth() + 1
-            : "0" + (current.getMonth() + 1)
-    }/${current.getFullYear()}`;
+        currentDate.getMonth() + 1 > 9
+            ? currentDate.getMonth() + 1
+            : "0" + (currentDate.getMonth() + 1)
+    }/${currentDate.getFullYear()}`;
     const time = `${
-        current.getHours() > 9 ? current.getHours() : "0" + current.getHours()
+        currentDate.getHours() > 9
+            ? currentDate.getHours()
+            : "0" + currentDate.getHours()
     }:${
-        current.getMinutes() > 9
-            ? current.getMinutes()
-            : "0" + current.getMinutes()
+        currentDate.getMinutes() > 9
+            ? currentDate.getMinutes()
+            : "0" + currentDate.getMinutes()
     }`;
 
     return (

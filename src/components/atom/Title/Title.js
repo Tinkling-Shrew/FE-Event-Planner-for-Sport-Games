@@ -3,7 +3,7 @@ import "./Title.css";
 
 export const mainClass = "title";
 
-const Title = ({ title, loc }) => {
+const Title = ({ title, children, loc }) => {
     return (
         <h1
             className={mainClass}
@@ -11,7 +11,8 @@ const Title = ({ title, loc }) => {
                 textAlign: loc === undefined ? "center" : loc,
             }}
         >
-            <span>{title}</span>
+            {title && <span>{title}</span>}
+            {children}
         </h1>
     );
 };

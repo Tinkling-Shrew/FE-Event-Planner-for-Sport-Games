@@ -1,9 +1,9 @@
 import React from "react";
-import "./RegisterPage.css";
+import "./Register.css";
 
 export const mainClass = "register-container";
 
-const RegisterPage = () => {
+const Register = () => {
     return (
         <div className={mainClass}>
             <h1>Register</h1>
@@ -11,4 +11,4 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+export default Register;

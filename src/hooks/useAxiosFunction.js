@@ -10,8 +10,8 @@ const useAxiosFunction = () => {
         const {
             axiosInstance,
             method,
-            url,
-            timeout,
+            url, // eslint-disable-next-line
+            body, // eslint-disable-next-line
             requestConfig = {},
         } = configObj;
 

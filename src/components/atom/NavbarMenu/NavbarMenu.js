@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavbarMenu.css";
-import LinkButton from "../../atom/LinkButton/LinkButton";
+
 
 export const mainClass = "menu-container";
 
@@ -19,7 +19,7 @@ const Menu = () => {
             <a className="menu-option" href="/about">
                 About
             </a>
-            <LinkButton>CREATE</LinkButton>
+            
         </div>
     );
 };
