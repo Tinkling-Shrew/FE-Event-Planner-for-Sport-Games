@@ -1,23 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "../apis/KowApi";
 
-function usePost(url, body) {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+function usePost(url) {
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
-    useEffect(() => {
-        axios
-            .post(url, body)
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => setError(err))
-            .finally(() => {
-                setLoading(false);
-            });
-    }, [url, body]);
+	const postData = async (body, headers) => {
+		await axios
+			.post(url, body, { headers })
+			.then((res) => {
+				console.log(res.data);
+			})
+			.catch((err) => setError(err))
+			.finally(setLoading(false));
+	};
 
-    return { loading, error };
+	return [loading, error, postData];
 }
 
 export default usePost;

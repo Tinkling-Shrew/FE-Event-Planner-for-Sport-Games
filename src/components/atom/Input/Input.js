@@ -1,35 +1,42 @@
 import "./Input.css";
-import { useState, useEffect } from "react";
 
 export const mainClass = "input-container";
 
 const Input = ({
-    placeholder,
-    before,
-    after,
-    onChange,
-    type,
-    width,
-    height,
+	name,
+	placeholder,
+	beforeChild,
+	afterChild,
+	onChange,
+	onKeyDown,
+	onFocus,
+	onBlur,
+	refer,
+	type,
+	width,
+	height,
+	disabled,
 }) => {
-    const [value, setValue] = useState(0);
-
-    useEffect(() => {}, []);
-
-    return (
-        <div className={mainClass} onChange={onChange}>
-            {before}
-            <input
-                className="Input"
-                type={type ? type : "text"}
-                placeholder={placeholder}
-                width={width}
-                height={height}
-                onChange={onChange}
-            />
-            {after}
-        </div>
-    );
+	return (
+		<div className={mainClass} onChange={onChange}>
+			{beforeChild}
+			<input
+				name={name}
+				className="Input"
+				type={type ? type : "text"}
+				placeholder={placeholder}
+				width={width}
+				height={height}
+				ref={refer}
+				onChange={onChange}
+				onKeyDown={onKeyDown}
+				onFocus={onFocus}
+				onBlur={onBlur}
+				disabled={disabled}
+			/>
+			{afterChild}
+		</div>
+	);
 };
 
 export default Input;

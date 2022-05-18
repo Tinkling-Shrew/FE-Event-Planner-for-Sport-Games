@@ -1,13 +1,7 @@
 import "./LoadingObject.css";
 
-export const mainClass = "loading";
-
 const LoadingObject = () => {
-    return (
-        <div className={mainClass}>
-            <span>Loading</span>
-        </div>
-    );
+    return <span>Loading</span>;
 };
 
 export default LoadingObject;

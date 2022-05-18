@@ -11,7 +11,6 @@ const useAxiosFunction = () => {
             axiosInstance,
             method,
             url, // eslint-disable-next-line
-            body, // eslint-disable-next-line
             requestConfig = {},
         } = configObj;
 

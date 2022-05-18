@@ -14,9 +14,19 @@
     align-items: flex-start;
 }
 
+.sportevent-basic-text {
+    font-size: var(--font-size-small);
+    font-weight: 100;
+    color: var(--color-dark);
+}
+
 .sportevent-title,
-.sportevent-host {
+.sportevent-host,
+.sportevent-location,
+.sportevent-id {
     text-decoration: none;
+    font-size: var(--font-size-small);
+    padding: 0.5rem 0;
 }
 
 .sportevent-title {
@@ -30,6 +40,10 @@
 
 .sportevent-host {
     color: var(--color4);
+}
+
+.sportevent-location {
+    color: var(--color-darker);
 }
 
 .sportevent-left,
@@ -63,24 +77,11 @@
     color: var(--color-valid);
 }
 
-.sportevent-host {
-    text-decoration: none;
-    font-size: var(--font-size-small);
-
-    margin: 1rem 0 1rem 0;
-}
-
 .sportevent-id {
     color: var(--color-dark);
-    margin: 1rem 0 1rem 0;
+    font-size: var(--font-size-small);
 }
 
 .sportevent-type {
     color: var(--color4);
-}
-
-.sportevent-basic-text {
-    font-size: 1rem;
-    font-weight: 100;
-    color: var(--color-dark);
 }

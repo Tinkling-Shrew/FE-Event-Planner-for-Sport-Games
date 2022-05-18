@@ -5,6 +5,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
         "@fortawesome/free-solid-svg-icons": "^6.1.1",
+        "@googlemaps/react-wrapper": "^1.1.33",
         "@svgr/plugin-svgo": "^6.2.0",
         "@svgr/webpack": "^5.5.0",
         "@testing-library/jest-dom": "^5.16.4",
@@ -46,6 +47,7 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "marathon": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"

@@ -1,17 +1,17 @@
-.menu-container {
+.Navbar {
     color: var(--color-lighter);
 }
 
-.menu-container > a {
+.Navbar > a {
     color: var(--color-lighter);
     text-decoration: none;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-.menu-option {
+.navbar-option {
     font-size: var(--font-size-small);
 }
 
-.menu-option:hover {
+.navbar-option:hover {
     color: var(--color2);
 }
