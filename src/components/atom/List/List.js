@@ -4,8 +4,12 @@ export const mainClass = "list-container";
 
 // needs a list of object to generate the items in the events list
 
-const SportEventList = ({ list }) => {
-    return <div className={mainClass}>{list}</div>;
+const List = ({ list, style }) => {
+	return (
+		<div className={mainClass} style={style}>
+			{list}
+		</div>
+	);
 };
 
-export default SportEventList;
+export default List;

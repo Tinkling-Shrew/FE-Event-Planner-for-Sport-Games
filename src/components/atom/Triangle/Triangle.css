@@ -1,0 +1,27 @@
+.Triangle {
+	width: 0;
+	height: 0;
+
+	z-index: 0;
+
+	position: absolute;
+
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid var(--color2);
+
+	animation: fall-diagonally 4s ease-in-out infinite;
+	overflow: hidden;
+}
+
+
+
+@keyframes fall-diagonally {
+	0% {
+		transform: translateX(0vw) rotate(0deg);
+	}
+
+	100% {
+		transform: translateX(125vw) rotate(999deg);
+	}
+}

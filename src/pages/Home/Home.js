@@ -5,11 +5,11 @@ import Hero from "../../components/organism/Hero/Hero";
 export const mainClass = "home-container";
 
 const Home = () => {
-    return (
-        <div className={mainClass}>
-            <Hero />
-        </div>
-    );
+	return (
+		<div className={mainClass}>
+			<Hero />
+		</div>
+	);
 };
 
 export default Home;

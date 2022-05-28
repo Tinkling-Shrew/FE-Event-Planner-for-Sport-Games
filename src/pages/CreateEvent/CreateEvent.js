@@ -5,100 +5,147 @@ import Title from "../../components/atom/Title/Title";
 import Input from "../../components/atom/Input/Input";
 import List from "../../components/atom/List/List";
 import Button from "../../components/atom/Button/Button";
+import ListItem from "../../components/atom/ListItem/ListItem";
 import CheckBox from "../../components/atom/CheckBox/CheckBox";
 import Select from "../../components/atom/Select/Select";
+import InvalidMessage from "../../components/atom/InvalidMessage/InvalidMessage";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const mainClass = "create-event-container";
 
+const mailRegex = new RegExp("/^w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$/");
+const participantsRegex = new RegExp("/[0-9]/");
+
+function isNumberKey(evt) {
+	var charCode = evt.which ? evt.which : evt.keyCode;
+	if (charCode === 46 || (charCode > 31 && (charCode < 48 || charCode > 57))) {
+		evt.preventDefault();
+		return false;
+	}
+	return true;
+}
+
 const CreateEvent = () => {
-	const [loading, error, postData] = usePost("/event");
+	// hook to change between pages
+	const navigate = useNavigate();
 
-	const [passCheck, setPassCheck] = useState(true);
+	// hook to post JSON objects
+	const [response, loading, error, postData] = usePost("/events");
 
+	// useState for error messages
+	const [invalidMessage, setInvalidMessage] = useState("");
+	const [check, setCheck] = useState(false);
+
+	// read data
 	const [participants, setParticipants] = useState([]);
 	const [name, setName] = useState("");
+	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [maxParticipants, setMaxParticipants] = useState(0);
 	const [sport, setSport] = useState("");
 	const [description, setDescription] = useState("");
-	const [host, setHost] = useState("");
 	const [location, setLocation] = useState("");
 	const [password, setPassword] = useState("");
 	const [startDate, setStartDate] = useState("");
 	const [startTime, setStartTime] = useState("");
 	const [endDate, setEndDate] = useState("");
 	const [endTime, setEndTime] = useState("");
-	const [repeat, setRepeat] = useState({});
-	const [mode, setMode] = useState("");
+	const [mode, setMode] = useState("daily");
 	const [count, setCount] = useState(0);
 
-	function validateDates(dateStart, dateEnd, timeStart, timeEnd) {
-		return (
-			new Date(dateStart + "T" + timeStart + "Z").valueOf() <
-			new Date(dateEnd + "T" + timeEnd + "Z").valueOf()
-		);
-	}
-
-	function validateName(eventName) {
-		return eventName ? true : false;
-	}
-
-	function validateMaxParticipant(maxParticipants) {
-		return maxParticipants ? true : false;
-	}
-
-	const handleSubmit = () => {
-		console.log(startDate);
-		console.log(startTime);
-		const obj = {
+	useEffect(() => {
+		console.clear();
+		console.log({
 			max_participants: maxParticipants,
 			name: name,
+			host: { username: username, email: email },
 			sport: sport,
 			description: description,
 			location: location,
 			password: password,
-			starttime: new Date(startDate + "T" + startTime + "Z").valueOf(),
-			endtime: new Date(endDate + "T" + endTime + "Z").valueOf(),
+			start_time: new Date(startDate + "T" + startTime + "Z").valueOf(),
+			end_time: new Date(endDate + "T" + endTime + "Z").valueOf(),
+			repeat: { mode: mode, count: count },
+		});
+	}, [
+		participants,
+		name,
+		username,
+		email,
+		maxParticipants,
+		sport,
+		description,
+		location,
+		password,
+		startDate,
+		startTime,
+		endDate,
+		endTime,
+		mode,
+		count,
+	]);
+
+	const handleSubmit = () => {
+		const eventObj = {
+			max_participants: maxParticipants,
+			name: name,
+			host: { username: username, email: email },
+			sport: sport,
+			description: description,
+			location: location,
+			password: password,
+			start_time: new Date(startDate + "T" + startTime + "Z").valueOf(),
+			end_time: new Date(endDate + "T" + endTime + "Z").valueOf(),
 			repeat: { mode: mode, count: count },
 		};
-		postData(obj);
+		return postData(eventObj);
 	};
 
 	return (
 		<div className={mainClass}>
-			<Title
-				id="create-event-title"
-				title={
-					<span
-						style={{
-							fontSize: "2.5rem",
-						}}
-					>
-						Create event
-					</span>
-				}
-				loc="left"
-			/>
 			<div className="create-event-body">
 				<div className="create-event-body-upper">
 					<div className="create-event-body-left">
+						<h3>Event Host:</h3>
+						<div className="input-two-container">
+							<Input
+								type="text"
+								beforeChild={"Username:"}
+								onChange={(e) => {
+									setUsername(e.target.value);
+								}}
+							/>
+							<Input
+								type="text"
+								beforeChild={"Mail:"}
+								onChange={(e) => {
+									setEmail(e.target.value);
+								}}
+							/>
+						</div>
+
 						<h3>Details:</h3>
 
-						<Input
-							type="text"
-							placeholder={"Event name"}
-							onChange={(e) => setName(e.target.value)}
-						/>
+						<Input type="text" placeholder={"Event name"} onChange={(e) => setName(e.target.value)} />
+
+						<Input type="text" placeholder={"Sport / Event type"} onChange={(e) => setSport(e.target.value)} />
 
 						<Input
-							type="text"
-							placeholder={"Sport"}
-							onChange={(e) => setSport(e.target.value)}
-						/>
-
-						<Input
-							type="text"
+							type="number"
 							placeholder={"Max Participants"}
 							onChange={(e) => setMaxParticipants(e.target.value)}
+							onKeyDown={(e) => {
+								if (!isNumberKey(e)) {
+									e.preventDefault();
+									setInvalidMessage("`Max participants` needs to be a number");
+								} else if (e.target.value <= 1) {
+									setInvalidMessage("You need more friends");
+								} else if (e.target.value > 1000) {
+									setInvalidMessage("Are you gathering an army?");
+								} else {
+									setInvalidMessage("");
+								}
+							}}
 						/>
 
 						<Input
@@ -159,19 +206,29 @@ const CreateEvent = () => {
 									setPassword(e.target.value);
 								}}
 							/>
-							<CheckBox
-								onChange={() => {
-									setPassCheck(true);
-								}}
-							/>
 						</div>
 
 						<div className="repeat-time-container">
-							<CheckBox text={"Repeat:"} />
+							<CheckBox
+								text={"Repeat:"}
+								onChange={(e) => {
+									if (!e.target.checked) {
+										setCount(0);
+										setMode("once");
+									}
+								}}
+							/>
 
 							<span>Times:</span>
 
-							<input type="number" className="repeat-input" />
+							<input
+								type="number"
+								className="repeat-input"
+								onChange={(e) => {
+									setCount(e.target.value);
+								}}
+								style={{ width: "5rem", margin: "0 1rem" }}
+							/>
 
 							<Select
 								options={["daily", "weekly", "monthly"]}
@@ -182,16 +239,59 @@ const CreateEvent = () => {
 						</div>
 					</div>
 					<div className="create-event-body-right">
-						<h3>People:</h3>
-						<Input beforeChild={"Mail"} placeholder={"mail@domain.com"} />
-						<List list={participants} />
+						<h3>Invite users:</h3>
+						<Input
+							beforeChild={"Mail"}
+							placeholder={"mail@domain.com"}
+							onKeyDown={(e) => {
+								if (e.key === "Enter" && !participants.includes(e.target.value)) {
+									setParticipants((participants) => [...participants, e.target.value]);
+								}
+							}}
+						/>
+						<List
+							list={participants.map((obj) => (
+								<ListItem>
+									{obj}
+									<Button
+										onClick={() => {
+											setParticipants(
+												participants.filter((value) => {
+													return value !== obj;
+												})
+											);
+										}}
+										style={{
+											width: "1rem",
+											height: "1rem",
+											backgroundColor: "var(--color-error-bright)",
+											boxShadow: "none",
+										}}
+									>
+										X
+									</Button>
+								</ListItem>
+							))}
+							style={{ height: "67vh" }}
+						/>
 					</div>
 				</div>
 				<div className="create-event-body-lower">
+					<InvalidMessage msg={invalidMessage ? invalidMessage : null} />
 					<Button
 						onClick={() => {
 							handleSubmit();
+							if (error) {
+								if (error.response) {
+									console.log("ERROR: " + error.response.data);
+									setInvalidMessage(error.response.data);
+								}
+							} else {
+								console.log("RESPONSE: " + response.body);
+								navigate("/lobby");
+							}
 						}}
+						style={{ width: "8rem", height: "3rem" }}
 					>
 						Submit
 					</Button>

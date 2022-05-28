@@ -1,17 +1,26 @@
 .Navbar {
-    color: var(--color-lighter);
+	color: var(--color-lighter);
 }
 
 .Navbar > a {
-    color: var(--color-lighter);
-    text-decoration: none;
-    margin: 0 0.5rem 0 0.5rem;
+	color: var(--color-lighter);
+	text-decoration: none;
+	margin: 0 0.5rem 0 0.5rem;
 }
 
 .navbar-option {
-    font-size: var(--font-size-small);
+	font-size: var(--font-size-small);
 }
 
 .navbar-option:hover {
-    color: var(--color2);
+	color: var(--color2);
+}
+
+@media screen and (max-width: 576px) {
+	.navbar-option {
+		font-size: var(--font-size-smaller);
+		color: var(--color-lighter);
+		text-decoration: none;
+		margin: 0 0.5rem 0 0.5rem;
+	}
 }

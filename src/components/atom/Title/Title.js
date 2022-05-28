@@ -3,18 +3,18 @@ import "./Title.css";
 
 export const mainClass = "title";
 
-const Title = ({ title, children, loc }) => {
-    return (
-        <h1
-            className={mainClass}
-            style={{
-                textAlign: loc === undefined ? "center" : loc,
-            }}
-        >
-            {title && <span>{title}</span>}
-            {children}
-        </h1>
-    );
+const Title = ({ title, loc, style }) => {
+	return (
+		<span
+			className={mainClass}
+			style={{
+				textAlign: loc === undefined ? "center" : loc,
+				style,
+			}}
+		>
+			{title && <span>{title}</span>}
+		</span>
+	);
 };
 
 export default Title;

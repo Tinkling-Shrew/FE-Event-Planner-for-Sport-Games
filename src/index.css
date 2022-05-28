@@ -1,61 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-    --color1: #06b2f8;
-    --color2: #ffc33c;
-    --color3: #f9fbdc;
-    --color4: #ff4c65;
-    --color-light: #dedede;
-    --color-lighter: #fefefe;
-    --color-dark: #212121;
-    --color-darker: #101010;
-    --color-valid: #2cb774;
-    --color-invalid: #fe0d1b;
-    --color-error-bright: #fe0d1b;
-    --color-error-dark: #000000;
-    --font-size-min: 0.5rem;
-    --font-size-smaller: 0.9rem;
-    --font-size-small: 1rem;
-    --font-size-medium: 1.5rem;
-    --font-size-big: 2rem;
-    --font-size-bigger: 2.5rem;
-    --font-size-max: 3rem;
+	--color1: #06b2f8;
+	--color1-darker: #0490d6;
+	--color2: #ffc33c;
+	--color2-darker: #eea22a;
+	--color-light: #dedede;
+	--color-lighter: #fefefe;
+	--color-dark: #323232;
+	--color-darker: #101010;
+	--color-valid: #2cb774;
+	--color-invalid: #fe0d1b;
+	--color-error-bright: #fe0d1b;
+	--color-error-dark: #000000;
+	--font-size-min: 0.5rem;
+	--font-size-smaller: 0.9rem;
+	--font-size-small: 1rem;
+	--font-size-medium: 1.5rem;
+	--font-size-big: 2rem;
+	--font-size-bigger: 2.5rem;
+	--font-size-max: 3rem;
 }
 
 /* FACTORY RESET */
 * {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    /* border: 1px solid red; */
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+
+	/* Debugging css line */
+	/* border: 1px solid red; */
 }
 
 body {
-    background-color: var(--color-lighter);
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-lighter);
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+	text-decoration: none;
 }
 
 a:hover {
-    color: var(--color2);
+	color: var(--color2);
+	text-decoration: none;
 }
 
 .app-container {
-    background-color: var(--color-light);
+	background-color: var(--color-light);
 }
 
 .input:focus {
-    color: var;
+	color: var;
 }

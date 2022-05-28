@@ -1,0 +1,91 @@
+.sportevent-container {
+	background-color: var(--color-lighter);
+	width: 100%;
+
+	border: 2px solid var(--color2);
+	box-shadow: 5px 5px 0px var(--color2);
+
+	margin: 0.5rem 0 0.5rem 0;
+	padding: 1rem;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.sportevent-basic-text {
+	font-size: var(--font-size-small);
+	font-weight: 100;
+	color: var(--color-dark);
+}
+
+.sportevent-title,
+.sportevent-host,
+.sportevent-location,
+.sportevent-id {
+	text-decoration: none;
+	font-size: var(--font-size-small);
+	padding: 0.5rem 0;
+}
+
+.sportevent-title {
+	color: var(--color-dark);
+	text-decoration: none;
+
+	padding: 0 0 0.5rem 0;
+
+	font-size: var(--font-size-big);
+}
+
+.sportevent-title:hover > * {
+	color: var(--color2);
+}
+
+.sportevent-host {
+	color: var(--color4);
+}
+
+.sportevent-location {
+	color: var(--color-darker);
+}
+
+.sportevent-left,
+.sportevent-right {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sportevent-left {
+	align-items: flex-start;
+}
+
+.sportevent-right {
+	align-items: flex-end;
+}
+
+.private-text,
+.public-text {
+	font-size: var(--font-size-medium);
+}
+
+.private-text {
+	color: var(--color-invalid);
+}
+
+.public-text {
+	color: var(--color-valid);
+}
+
+.sportevent-id {
+	color: var(--color-dark);
+	font-size: var(--font-size-small);
+}
+
+.sportevent-type {
+	color: var(--color4);
+}

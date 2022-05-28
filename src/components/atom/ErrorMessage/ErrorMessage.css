@@ -1,25 +1,18 @@
 .error-message-container {
-    background-color: black;
-    color: var(--color-light);
+	background-color: black;
+	color: var(--color-light);
 
-    width: 100%;
-    height: fit-content;
+	border-radius: 5rem;
+	margin: 0 1rem;
 
-    padding: 1rem;
+	width: 100%;
+	height: fit-content;
 
-    font-size: var(--font-size-max);
-    font-weight: 900;
+	font-size: var(--font-size-max);
+	font-weight: 900;
 
-    background: repeating-linear-gradient(
-        45deg,
-        var(--color4),
-        var(--color-error-dark) 20px,
-        rgb(0, 0, 0, 0.1) 20px,
-        rgb(0, 0, 0, 0.1) 20px
-    );
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/molecule/Header/Header";
 import Footer from "./components/molecule/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
@@ -14,28 +14,17 @@ import Invite from "./pages/Invite/Invite";
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<div className="app-container">
-				<Navbar />
-				<>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/home" element={<Home />} />
-						<Route path="/landing" element={<Landing />} />
-						<Route path="/login" element={<Login />} />
-						<Route path="/register" element={<Register />} />
-						<Route path="/lobby" element={<Lobby />} />
-						<Route path="/create_event" element={<CreateEvent />} />
-						<Route exact path="/lobby/event/:id" element={<Event />} />
-						<Route exact path="/invite?:id" element={<Invite />} />
-						<Route path="*" element={<NotFound />} />
-					</Routes>
-				</>
-				{window.location.pathname !== "/lobby" &&
-					window.location.pathname !== "/invite" &&
-					window.location.pathname !== "/create_event" && <Footer />}
-			</div>
-		</BrowserRouter>
+		<div className="app-container">
+			<Navbar />
+			<Routes>
+				<Route index path="/" element={<Home />} />
+				<Route path="lobby" element={<Lobby />} />
+				<Route path="lobby/event/:id" element={<Event />} />
+				<Route path="invite/:id" element={<Invite />} />
+				<Route path="create_event" element={<CreateEvent />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
+		</div>
 	);
 };
 

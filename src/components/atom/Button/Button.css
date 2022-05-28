@@ -1,25 +1,41 @@
-.button-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.Button {
+	cursor: pointer;
+	background-color: var(--color2);
+	color: var(--color-lighter);
+
+	font-weight: 900;
+
+	padding: 0.8rem;
+
+	/* border: 1px solid var(--color-lighter); */
+	border-radius: 0.3rem;
+	box-shadow: 2px 2px 1px var(--color2-darker);
+
+	font-size: var(--font-size-small);
+	font-weight: 900;
+
+	text-decoration: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
-.Button {
-    cursor: pointer;
-    background-color: var(--color2);
-    color: var(--color-lighter);
+.Button:hover {
+	background-color: var(--color2-darker);
+}
 
-    padding: 0.8rem;
-    margin: 0 1rem 0 0.5rem;
+@media screen and (max-width: 576px) {
+	.Button {
+		padding: 0.6rem;
 
-    border: 1px solid var(--color-lighter);
-    border-radius: 0.3rem;
+		border: 1px solid var(--color-lighter);
+		border-radius: 0.3rem;
 
-    font-size: var(--font-size-small);
-    font-weight: 0;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0, 0.2);
+		font-size: var(--font-size-smallest);
+		font-weight: 0;
 
-    text-decoration: none;
+		text-decoration: none;
+	}
 }

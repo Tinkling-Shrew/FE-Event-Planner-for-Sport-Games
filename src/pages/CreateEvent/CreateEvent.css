@@ -1,77 +1,92 @@
 .create-event-container {
-    background-color: var(--color-lighter);
+	background-color: var(--color-lighter);
+	height: 84.7vh;
+	/* width: 100%; */
 
-    width: 100%;
-    height: 80vh;
+	padding: 1rem 0;
+	margin: 0;
 
-    padding: 1rem 0;
+	display: flex;
+	flex-grow: 1;
 }
 
 .create-event-body {
-    width: 100%;
+	width: 100%;
 
-    padding: 1rem 0;
+	padding: 0.5rem 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
-.create-event-body-upper,
-.create-event-body-lower {
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
+.create-event-body-upper {
+	width: 100%;
+	height: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.create-event-body-lower {
+	width: 100%;
+	height: 100%;
+
+	border-top: 1px solid var(--color-darker);
+
+	padding: 0.5rem 5rem 0 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	flex-grow: 1;
 }
 
 .create-event-body-left,
 .create-event-body-right {
-    width: 49.5%;
+	width: 49.5%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+	padding: 0 1rem 0 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 .create-event-body-left > *,
 .create-event-body-right > * {
-    margin: 0 0 1rem 0;
+	margin: 0 0 1rem 0;
 }
 
 .input-two-container {
-    width: 100%;
+	width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .input-two-container > * {
-    width: 49%;
-}
-
-.input-two-container:nth-child(2) {
-    background-color: black;
+	width: 49%;
 }
 
 .repeat-time-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .repeat-input {
-    margin: 0 1rem 0 1rem;
-    width: 4rem;
-    height: 2rem;
+	margin: 0 1rem 0 1rem;
+	width: 4rem;
+	height: 2rem;
 }

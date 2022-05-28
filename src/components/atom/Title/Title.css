@@ -1,12 +1,13 @@
 .title {
-    background-color: var(--color1);
-    color: var(--color3);
+	color: var(--color-dark);
 
-    width: 100%;
-    text-align: center;
+	padding: 1rem;
+
+	width: 100%;
+	text-align: center;
 }
 
 .title > * {
-    padding: 1rem;
-    font-size: var(--font-size-big);
+	/* padding: 1rem; */
+	font-size: var(--font-size-bigger);
 }
