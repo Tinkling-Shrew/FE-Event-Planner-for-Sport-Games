@@ -7,8 +7,9 @@ function useFetch(url, headers) {
 	const [error, setError] = useState(null);
 
 	const fetchData = async () => {
-		console.log("URL: " + url);
-		return axios({ url: url, method: "get", timeout: 8000, headers: headers })
+		setLoading(true);
+
+		await axios({ url: url, method: "get", headers: headers })
 			.then((res) => {
 				setData(res.data);
 			})

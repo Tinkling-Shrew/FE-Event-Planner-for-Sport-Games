@@ -27,10 +27,12 @@ function isNumberKey(evt) {
 
 const CreateEvent = () => {
 	// hook to change between pages
+	const [eventId, setEventId] = useState("");
 	const navigate = useNavigate();
 
 	// hook to post JSON objects
 	const [response, loading, error, postData] = usePost("/events");
+	const [responsei, loadingi, errori, postDatai] = usePost("/invite");
 
 	// useState for error messages
 	const [invalidMessage, setInvalidMessage] = useState("");
@@ -281,15 +283,16 @@ const CreateEvent = () => {
 					<Button
 						onClick={() => {
 							handleSubmit();
+							postDatai({ emails: participants, event: eventId });
 							if (error) {
 								if (error.response) {
 									console.log("ERROR: " + error.response.data);
 									setInvalidMessage(error.response.data);
 								}
 							} else {
-								console.log("RESPONSE: " + response.body);
-								navigate("/lobby");
+								// navigate("/lobby");
 							}
+							console.log(response);
 						}}
 						style={{ width: "8rem", height: "3rem" }}
 					>

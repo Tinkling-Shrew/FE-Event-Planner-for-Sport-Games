@@ -1,11 +1,16 @@
 .hero-container {
 	background-color: var(--color-lighter);
-	color: black;
+	background-image: url("https://png.pngtree.com/back_origin_pic/04/21/36/e79bec6267f3f0a959dbd8581e7201b6.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 
-	height: 76vh;
+	color: black;
+
+	height: 75vh;
 	width: 100%;
 
 	bottom: 0;

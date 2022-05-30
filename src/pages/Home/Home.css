@@ -1,0 +1,9 @@
+.Home {
+	height: 89.8vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	margin: 0;
+	top: 0;
+}

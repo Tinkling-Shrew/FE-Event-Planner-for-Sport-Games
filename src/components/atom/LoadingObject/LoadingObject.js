@@ -1,7 +1,7 @@
 import "./LoadingObject.css";
 
-const LoadingObject = () => {
-	return <div className="spinner"></div>;
+const LoadingObject = ({ text }) => {
+	return <div className="spinner">{text}</div>;
 };
 
 export default LoadingObject;

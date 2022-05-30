@@ -1,13 +1,10 @@
-.title {
-	color: var(--color-dark);
+.Title {
+	color: var(--color-darker);
 
 	padding: 1rem;
 
+	font-weight: 500;
+
 	width: 100%;
 	text-align: center;
-}
-
-.title > * {
-	/* padding: 1rem; */
-	font-size: var(--font-size-bigger);
 }

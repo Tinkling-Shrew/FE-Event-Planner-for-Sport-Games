@@ -1,17 +1,24 @@
 .spinner {
-	position: absolute;
+	position: relative;
 
 	width: 100px;
 	height: 100px;
 
-	top: 50%;
-	left: 50%;
-	right: 50%;
-	bottom: 50%;
+	margin: 5rem;
 
 	border-radius: 10%;
 	border-bottom-color: 10px solid var(--color2);
 	animation: 2s linear infinite spin;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner > * {
+	color: var(--color-dark);
+	font-size: 2rem;
 }
 
 @keyframes spin {
@@ -24,7 +31,7 @@
 	50% {
 		border-radius: 100%;
 		background-color: var(--color-lighter);
-		transform: translate3d(-50%, -50%, 0) scale(0%) rotate(180deg);
+		transform: translate3d(-50%, -50%, 0) scale(25%) rotate(180deg);
 	}
 
 	100% {

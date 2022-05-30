@@ -1,6 +1,6 @@
 .footer-container {
-	background-color: var(--color1);
-	color: var(--color3);
+	background-color: var(--color-dark);
+	color: var(--color-lighter);
 
 	height: 8rem;
 
@@ -27,7 +27,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	margin: 1rem 0 0 0;
+	margin: 0rem 0 0 0;
 }
 
 .footer-left,
@@ -57,13 +57,13 @@
 }
 
 .footer-title {
-	color: var(--color3);
+	color: var(--color-lighter);
 	text-decoration: none;
 }
 
 .footer-text {
 	text-decoration: none;
-	color: var(--color3);
+	color: var(--color-lighter);
 	font-size: 1.2rem;
 	font-weight: 500;
 }

@@ -19,47 +19,41 @@ const Invite = () => {
 	const [rResponse, rPLoading, rPError, rPostData] = usePost("/invite/" + inviteID + "?accept=false");
 
 	return (
-		<>
-			{event ? (
-				<div>
-					<div className="bg"></div>
-					<div className="bg bg2"></div>
-					<div className="bg bg3"></div>
-					<div className={mainClass}>
-						<>
-							<h1>
-								Invitation for {event.name} : {event.sport}, sent from {event.host.name}.
-							</h1>
-							<h1>Accept?</h1>
+		<div>
+			<div className="bg"></div>
+			<div className="bg bg2"></div>
+			<div className="bg bg3"></div>
+			<div className={mainClass}>
+				<>
+					<h1>
+						Invitation for {event.name} : {event.sport}, sent from {event.host.name}.
+					</h1>
+					<h1>Accept?</h1>
 
-							<div className="invite-button-container">
-								<LinkButton
-									to={"/lobby/event/" + event.id}
-									className="invite-yes-button"
-									onClick={() => {
-										return aPostData({});
-									}}
-								>
-									Yes
-								</LinkButton>
-								or
-								<LinkButton
-									to={"/lobby"}
-									className="invite-no-button"
-									onClick={() => {
-										return rPostData({});
-									}}
-								>
-									No
-								</LinkButton>
-							</div>
-						</>
+					<div className="invite-button-container">
+						<LinkButton
+							to={"/lobby/event/" + event.id}
+							className="invite-yes-button"
+							onClick={() => {
+								return aPostData({});
+							}}
+						>
+							Yes
+						</LinkButton>
+						or
+						<LinkButton
+							to={"/lobby"}
+							className="invite-no-button"
+							onClick={() => {
+								return rPostData({});
+							}}
+						>
+							No
+						</LinkButton>
 					</div>
-				</div>
-			) : (
-				<ErrorMessage errMsg={"Existing event not"} />
-			)}
-		</>
+				</>
+			</div>
+		</div>
 	);
 };
 

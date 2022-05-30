@@ -1,18 +1,18 @@
 import React from "react";
 import "./Title.css";
 
-export const mainClass = "title";
+export const mainClass = "Title";
 
-const Title = ({ title, loc, style }) => {
+const Title = ({ title, loc, style, fontSize }) => {
 	return (
 		<span
 			className={mainClass}
 			style={{
 				textAlign: loc === undefined ? "center" : loc,
-				style,
+				...style,
 			}}
 		>
-			{title && <span>{title}</span>}
+			{title && title}
 		</span>
 	);
 };

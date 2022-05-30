@@ -7,7 +7,6 @@ import LoadingObject from "../../components/atom/LoadingObject/LoadingObject";
 import Button from "../../components/atom/Button/Button";
 import useFetch from "../../hooks/useFetch";
 import LobbyEvent from "../../components/atom/LobbyEvent/LobbyEvent";
-import ErrorMessage from "../../components/atom/ErrorMessage/ErrorMessage";
 
 export const mainClass = "lobby-container";
 
@@ -41,7 +40,6 @@ const Lobby = () => {
 			</div>
 			<div className="lobby-body">
 				{loading && <LoadingObject />}
-				{!loading && error && <ErrorMessage errMsg={error} />}
 				{!loading && !error && events && (
 					<List
 						list={events

@@ -6,7 +6,7 @@ const useAxiosFunction = () => {
     const [loading, setLoading] = useState(false);
     const [controller, setController] = useState();
 
-    const axiosFetch = async (configObj) => {
+    const fetchData = async (configObj) => {
         const {
             axiosInstance,
             method,
@@ -39,7 +39,7 @@ const useAxiosFunction = () => {
         return () => controller && controller.abort();
     }, [controller]);
 
-    return [response, error, loading, axiosFetch];
+    return [response, error, loading, fetch];
 };
 
 export default useAxiosFunction;
